@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         // Atualizar a média anual no elemento HTML correspondente ao prefixo
                         const elemento = document.getElementById(prefixo);
                         if (elemento) {
-                            const mediaAnualpor = mediaAnual * 50 / 3;
-                            if (mediaAnual < 100) {
+                            if (mediaAnual < 6) {
+                                const mediaAnualpor = mediaAnual * 50 / 3;
                                 elemento.textContent = mediaAnualpor.toFixed(2) + "%"; // Arredonda para 2 casas decimais
                                 elemento.style.width = mediaAnualpor.toFixed(2) + "%";
                                 if (mediaAnualpor < 100) {
@@ -175,9 +175,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                     elemento.style.backgroundColor = "#ff0000"
                                 }
                             } else {
-                                elemento.textContent = "100%"; // Arredonda para 2 casas decimais
                                 elemento.style.width = "100%";
                                 elemento.style.backgroundColor = "#009929";
+                                elemento.textContent = "100%";
+                                if (mediaAnual == 10) {
+                                    elemento.textContent = "⭐⭐⭐⭐⭐";
+                                }
+                                if (mediaAnual < 10) {
+                                    elemento.textContent = "⭐⭐⭐⭐";
+                                }
+                                if (mediaAnual < 9) {
+                                    elemento.textContent = "⭐⭐⭐";
+                                }
+                                if (mediaAnual < 8) {
+                                    elemento.textContent = "⭐⭐";
+                                }
+                                if (mediaAnual < 7) {
+                                    elemento.textContent = "⭐";
+                                }
                             }
                         }
                     }));
