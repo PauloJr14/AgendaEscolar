@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Paulo José">
-    <meta name="keywords" content="Agenda, Escolar, 2024, Escola, de, Aplicação, Professor, Chaves">
-    <meta name="description" content="Esta é a Agenda Escolar, versão 2024.">
+    <meta name="keywords" content="Agenda, Escolar, 2025, Escola, de, Aplicação, Professor, Chaves">
+    <meta name="description" content="Esta é a Agenda Escolar, versão 2025.">
     
     <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="style.css">
@@ -16,12 +16,13 @@
 <body>
     <header>
         <nav>
-            <h1>Agenda Escolar 2024</h1>
+            <h1>Agenda Escolar 2025</h1>
             <button class="button-with-image" onclick="logout()"><img src="desconectar.png" alt="Desconectar"></button>
         </nav>
     </header>
 
     <nav class="geral">
+        <br>
         <h1>Visão Geral</h1>
         <table>
             <thead>
@@ -35,7 +36,7 @@
                     <td>Artes</td>
                     <td>
                         <div class="progress-container">
-                            <div id="art" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="art" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -43,7 +44,7 @@
                     <td>Biologia</td>
                     <td>
                         <div class="progress-container">
-                            <div id="bio" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="bio" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -51,7 +52,7 @@
                     <td>Educação Física</td>
                     <td>
                         <div class="progress-container">
-                            <div id="edf" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="edf" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -59,7 +60,7 @@
                     <td>Filosofia</td>
                     <td>
                         <div class="progress-container">
-                            <div id="fil" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="fil" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -67,7 +68,7 @@
                     <td>Física</td>
                     <td>
                         <div class="progress-container">
-                            <div id="fis" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="fis" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -75,7 +76,7 @@
                     <td>Geografia</td>
                     <td>
                         <div class="progress-container">
-                            <div id="geo" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="geo" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -83,7 +84,7 @@
                     <td>História</td>
                     <td>
                         <div class="progress-container">
-                            <div id="his" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="his" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -91,7 +92,7 @@
                     <td>Inglês</td>
                     <td>
                         <div class="progress-container">
-                            <div id="ing" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="ing" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -99,7 +100,7 @@
                     <td>Matemática</td>
                     <td>
                         <div class="progress-container">
-                            <div id="mat" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="mat" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -107,7 +108,7 @@
                     <td>Português</td>
                     <td>
                         <div class="progress-container">
-                            <div id="por" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="por" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -115,23 +116,15 @@
                     <td>Química</td>
                     <td>
                         <div class="progress-container">
-                            <div id="qui" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="qui" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Eletiva</td>
+                    <td>Sociologia</td>
                     <td>
                         <div class="progress-container">
-                            <div id="ele" class="progress-bar" style="width: 50%;">50%</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Investigação Científica</td>
-                    <td>
-                        <div class="progress-container">
-                            <div id="inv" class="progress-bar" style="width: 50%;">50%</div>
+                            <div id="soc" class="progress-bar" style="width: 0%;">0%</div>
                         </div>
                     </td>
                 </tr>
@@ -140,11 +133,10 @@
     </nav>
 
     <nav id="bimestre" class="bimestre">
-        <h1>Bimestres</h1>
-        <button onclick="bimestre1()">1º Bimestre</button>
-        <button onclick="bimestre2()">2º Bimestre</button>
-        <button onclick="bimestre3()">3º Bimestre</button>
-        <button onclick="bimestre4()">4º Bimestre</button>
+        <h1>Trimestres</h1>
+        <button onclick="bimestre1()">1º Trimestre</button>
+        <button onclick="bimestre2()">2º Trimestre</button>
+        <button onclick="bimestre3()">3º Trimestre</button>
     </nav>
     
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>

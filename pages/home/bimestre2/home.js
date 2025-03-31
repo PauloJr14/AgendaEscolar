@@ -31,10 +31,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     document.getElementById('porn2').value = data.porb2n2 || '';
                     document.getElementById('quin1').value = data.quib2n1 || '';
                     document.getElementById('quin2').value = data.quib2n2 || '';
-                    document.getElementById('elen1').value = data.eleb2n1 || '';
-                    document.getElementById('elen2').value = data.eleb2n2 || '';
-                    document.getElementById('invn1').value = data.invb2n1 || '';
-                    document.getElementById('invn2').value = data.invb2n2 || '';
+                    document.getElementById('socn1').value = data.socb2n1 || '';
+                    document.getElementById('socn2').value = data.socb2n2 || '';
 
                     // Atualiza as médias
                     calcularMediaIndividual('artn1', 'artn2', 'artmb');
@@ -48,8 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     calcularMediaIndividual('matn1', 'matn2', 'matmb');
                     calcularMediaIndividual('porn1', 'porn2', 'pormb');
                     calcularMediaIndividual('quin1', 'quin2', 'quimb');
-                    calcularMediaIndividual('elen1', 'elen2', 'elemb');
-                    calcularMediaIndividual('invn1', 'invn2', 'invmb');
+                    calcularMediaIndividual('socn1', 'socn2', 'socmb');
                 } else {
                     console.log("Documento não encontrado");
                 }
@@ -94,10 +91,8 @@ function salvar() {
 			"porb2n2": document.getElementById('porn2').value,
 			"quib2n1": document.getElementById('quin1').value,
 			"quib2n2": document.getElementById('quin2').value,
-			"eleb2n1": document.getElementById('elen1').value,
-			"eleb2n2": document.getElementById('elen2').value,
-			"invb2n1": document.getElementById('invn1').value,
-			"invb2n2": document.getElementById('invn2').value
+			"socb2n1": document.getElementById('socn1').value,
+			"socb2n2": document.getElementById('socn2').value
     	}
 		
         collection.doc(user.uid).set(data, {merge: true}).then(() => {
@@ -112,8 +107,7 @@ function salvar() {
             calcularMediaIndividual('matn1', 'matn2', 'matmb');
             calcularMediaIndividual('porn1', 'porn2', 'pormb');
             calcularMediaIndividual('quin1', 'quin2', 'quimb');
-            calcularMediaIndividual('elen1', 'elen2', 'elemb');
-            calcularMediaIndividual('invn1', 'invn2', 'invmb');
+            calcularMediaIndividual('socn1', 'socn2', 'socmb');
             
             alert("Suas notas foram salvas");
         }).catch((error) => {

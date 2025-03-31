@@ -35,7 +35,7 @@ function recoverPassword() {
     showLoading();
     firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
         hideLoading();
-        alert('Email enviado com sucesso');
+        alert('Acesse o link enviado para o seu e-mail para redefinir sua senha.');
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));

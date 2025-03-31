@@ -74,8 +74,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         "matb1n1", "matb1n2",
                         "porb1n1", "porb1n2",
                         "quib1n1", "quib1n2",
-                        "eleb1n1", "eleb1n2",
-                        "invb1n1", "invb1n2"
+                        "socb1n1", "socb1n2"
                     ]
                 },
                 {
@@ -92,8 +91,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         "matb2n1", "matb2n2",
                         "porb2n1", "porb2n2",
                         "quib2n1", "quib2n2",
-                        "eleb2n1", "eleb2n2",
-                        "invb2n1", "invb2n2"
+                        "socb2n1", "socb2n2"
                     ]
                 },
                 {
@@ -110,32 +108,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         "matb3n1", "matb3n2",
                         "porb3n1", "porb3n2",
                         "quib3n1", "quib3n2",
-                        "eleb3n1", "eleb3n2",
-                        "invb3n1", "invb3n2"
-                    ]
-                },
-                {
-                    nome: "bimestre4",
-                    campos: [
-                        "artb4n1", "artb4n2",
-                        "biob4n1", "biob4n2",
-                        "edfb4n1", "edfb4n2",
-                        "filb4n1", "filb4n2",
-                        "fisb4n1", "fisb4n2",
-                        "geob4n1", "geob4n2",
-                        "hisb4n1", "hisb4n2",
-                        "ingb4n1", "ingb4n2",
-                        "matb4n1", "matb4n2",
-                        "porb4n1", "porb4n2",
-                        "quib4n1", "quib4n2",
-                        "eleb4n1", "eleb4n2",
-                        "invb4n1", "invb4n2"
+                        "socb3n1", "socb3n2"
                     ]
                 }
             ];
 
             // Definição dos prefixos
-            const prefixos = ["art", "bio", "edf", "fil", "fis", "geo", "his", "ing", "mat", "por", "qui", "ele", "inv"];
+            const prefixos = ["art", "bio", "edf", "fil", "fis", "geo", "his", "ing", "mat", "por", "qui", "soc"];
 
             // Array de promessas para verificar e atualizar todos os bimestres
             const promisesVerificarAtualizar = bimestres.map(bimestre => {
@@ -231,8 +210,3 @@ function bimestre2() {
 function bimestre3() {
     window.location.href = "bimestre3/index.html";
 }
-
-function bimestre4() {
-    window.location.href = "bimestre4/index.html";
-}
-
