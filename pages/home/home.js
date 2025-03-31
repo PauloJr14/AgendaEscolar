@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     campos: [
                         "artb1n1", "artb1n2",
                         "biob1n1", "biob1n2",
+                        "cieb1n1", "cieb1n2",
                         "edfb1n1", "edfb1n2",
                         "filb1n1", "filb1n2",
                         "fisb1n1", "fisb1n2",
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     campos: [
                         "artb2n1", "artb2n2",
                         "biob2n1", "biob2n2",
+                        "cieb2n1", "cieb2n2",
                         "edfb2n1", "edfb2n2",
                         "filb2n1", "filb2n2",
                         "fisb2n1", "fisb2n2",
@@ -99,6 +101,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     campos: [
                         "artb3n1", "artb3n2",
                         "biob3n1", "biob3n2",
+                        "cieb3n1", "cieb3n2",
                         "edfb3n1", "edfb3n2",
                         "filb3n1", "filb3n2",
                         "fisb3n1", "fisb3n2",
@@ -114,7 +117,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             ];
 
             // Definição dos prefixos
-            const prefixos = ["art", "bio", "edf", "fil", "fis", "geo", "his", "ing", "mat", "por", "qui", "soc"];
+            const prefixos = ["art", "bio", "cie", "edf", "fil", "fis", "geo", "his", "ing", "mat", "por", "qui", "soc"];
 
             // Array de promessas para verificar e atualizar todos os bimestres
             const promisesVerificarAtualizar = bimestres.map(bimestre => {
@@ -138,6 +141,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         const elemento = document.getElementById(prefixo);
                         if (elemento) {
                             if (mediaAnual < 6) {
+                                if (elemento.id == "bio" & mediaAnual !== 0) {
+                                    button2();
+                                    document.getElementById("div1").style.display = "none";
+                                } else if (elemento.id == "cie" & mediaAnual !== 0) {
+                                    button1();
+                                    document.getElementById("div1").style.display = "none";
+                                } else if (elemento.id == "fil" & mediaAnual !== 0) {
+                                    button2();
+                                    document.getElementById("div1").style.display = "none";
+                                } else if (elemento.id == "fis" & mediaAnual !== 0) {
+                                    button2();
+                                    document.getElementById("div1").style.display = "none";
+                                } else if (elemento.id == "qui" & mediaAnual !== 0) {
+                                    button2();
+                                    document.getElementById("div1").style.display = "none";
+                                } else if (elemento.id == "soc" & mediaAnual !== 0) {
+                                    button2();
+                                    document.getElementById("div1").style.display = "none";
+                                }
                                 const mediaAnualpor = mediaAnual * 50 / 3;
                                 elemento.textContent = mediaAnualpor.toFixed(2) + "%"; // Arredonda para 2 casas decimais
                                 elemento.style.width = mediaAnualpor.toFixed(2) + "%";
@@ -209,4 +231,32 @@ function bimestre2() {
 
 function bimestre3() {
     window.location.href = "bimestre3/index.html";
+}
+
+function button1() {
+    document.getElementById("bt1").disabled = true;
+    document.getElementById("bt1").style.backgroundColor = "rgb(0, 225, 0)";
+    document.getElementById("bt2").disabled = false;
+    document.getElementById("bt2").style.backgroundColor = "rgb(225, 0, 0)";
+
+    document.getElementById("Lcie").style.display = "";
+    document.getElementById("Lbio").style.display = "none";
+    document.getElementById("Lfis").style.display = "none";
+    document.getElementById("Lqui").style.display = "none";
+    document.getElementById("Lfil").style.display = "none";
+    document.getElementById("Lsoc").style.display = "none";
+}
+
+function button2() {
+    document.getElementById("bt2").disabled = true;
+    document.getElementById("bt2").style.backgroundColor = "rgb(0, 225, 0)";
+    document.getElementById("bt1").disabled = false;
+    document.getElementById("bt1").style.backgroundColor = "rgb(225, 0, 0)";
+
+    document.getElementById("Lcie").style.display = "none";
+    document.getElementById("Lbio").style.display = "";
+    document.getElementById("Lfis").style.display = "";
+    document.getElementById("Lqui").style.display = "";
+    document.getElementById("Lfil").style.display = "";
+    document.getElementById("Lsoc").style.display = "";
 }

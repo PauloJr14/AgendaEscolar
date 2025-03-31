@@ -191,6 +191,7 @@ input {
 .button-container {
     display: flex; /* Ativa o Flexbox */
     justify-content: center; /* Centraliza os botões */
+    align-items: baseline; /* Centraliza os botões verticalmente */
     gap: 10px; /* Espaço entre os botões */
 }
 

@@ -25,6 +25,10 @@
         <div>
             <h1>1º Trimestre</h1>
         </div>
+        <div id="div1" class="button-container">
+            <button id="bt1" onclick="button1()" style="background-color: rgb(0, 225, 0);" disabled>Ensino Fundamental</button>
+            <button id="bt2" onclick="button2()" style="background-color: rgb(225, 0, 0);">Ensino Médio</button>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -37,19 +41,23 @@
                     <td>Artes</td>
                     <td><input id="artn1" type="text" value="0.0"></input><input id="artn2" type="text" value="0.0"></input><p id="artmb">0.0</p></td>
                 </tr>
-                <tr>
+                <tr id="Lbio" style="display: none;">
                     <td>Biologia</td>
                     <td><input id="bion1" type="text" value="0.0"></input><input id="bion2" type="text" value="0.0"></input><p id="biomb">0.0</p></td>
+                </tr>
+                <tr id="Lcie">
+                    <td>Ciências</td>
+                    <td><input id="cien1" type="text" value="0.0"></input><input id="cien2" type="text" value="0.0"></input><p id="ciemb">0.0</p></td>
                 </tr>
                 <tr>
                     <td>Educação Física</td>
                     <td><input id="edfn1" type="text" value="0.0"></input><input id="edfn2" type="text" value="0.0"></input ><p id="edfmb">0.0</p></td>
                 </tr>
-                <tr>
+                <tr id="Lfil" style="display: none;">
                     <td>Filosofia</td>
                     <td><input id="filn1" type="text" value="0.0"></input><input id="filn2" type="text" value="0.0"></input><p id="filmb">0.0</p></td>
                 </tr>
-                <tr>
+                <tr id="Lfis" style="display: none;">
                     <td>Física</td>
                     <td><input id="fisn1" type="text" value="0.0"></input><input id="fisn2" type="text" value="0.0"></input><p id="fismb">0.0</p></td>
                 </tr>
@@ -73,11 +81,11 @@
                     <td>Português</td>
                     <td><input id="porn1" type="text" value="0.0"></input><input id="porn2" type="text" value="0.0"></input><p id="pormb">0.0</p></td>
                 </tr>
-                <tr>
+                <tr id="Lqui" style="display: none;">
                     <td>Química</td>
                     <td><input id="quin1" type="text" value="0.0"></input><input id="quin2" type="text" value="0.0"></input><p id="quimb">0.0</p></td>
                 </tr>
-                <tr>
+                <tr id="Lsoc" style="display: none;">
                     <td>Sociologia</td>
                     <td><input id="socn1" type="text" value="0.0"></input><input id="socn2" type="text" value="0.0"></input><p id="socmb">0.0</p></td>
                 </tr>

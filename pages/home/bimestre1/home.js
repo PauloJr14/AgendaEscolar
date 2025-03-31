@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     document.getElementById('artn2').value = data.artb1n2 || '';
                     document.getElementById('bion1').value = data.biob1n1 || '';
                     document.getElementById('bion2').value = data.biob1n2 || '';
+                    document.getElementById('cien1').value = data.cieb1n1 || '';
+                    document.getElementById('cien2').value = data.cieb1n2 || '';
                     document.getElementById('edfn1').value = data.edfb1n1 || '';
                     document.getElementById('edfn2').value = data.edfb1n2 || '';
                     document.getElementById('filn1').value = data.filb1n1 || '';
@@ -34,9 +36,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     document.getElementById('socn1').value = data.socb1n1 || '';
                     document.getElementById('socn2').value = data.socb1n2 || '';
 
+                    if (Number(data.biob1n1) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.biob1n2) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.cieb1n1) !== 0) {
+                        button1();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.cieb1n2) !== 0) {
+                        button1();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.filb1n1) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.filb1n2) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.fisb1n1) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.fisb1n2) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.quib1n1) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.quib1n2) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.socb1n1) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    } else if (Number(data.socb1n2) !== 0) {
+                        button2();
+                        document.getElementById("div1").style.display = "none";
+                    }
+
                     // Atualiza as médias
                     calcularMediaIndividual('artn1', 'artn2', 'artmb');
                     calcularMediaIndividual('bion1', 'bion2', 'biomb');
+                    calcularMediaIndividual('cien1', 'cien2', 'ciemb');
                     calcularMediaIndividual('edfn1', 'edfn2', 'edfmb');
                     calcularMediaIndividual('filn1', 'filn2', 'filmb');
                     calcularMediaIndividual('fisn1', 'fisn2', 'fismb');
@@ -47,6 +88,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     calcularMediaIndividual('porn1', 'porn2', 'pormb');
                     calcularMediaIndividual('quin1', 'quin2', 'quimb');
                     calcularMediaIndividual('socn1', 'socn2', 'socmb');
+
                 } else {
                     console.log("Documento não encontrado");
                 }
@@ -73,6 +115,8 @@ function salvar() {
 			"artb1n2": document.getElementById('artn2').value,
 			"biob1n1": document.getElementById('bion1').value,
 			"biob1n2": document.getElementById('bion2').value,
+			"cieb1n1": document.getElementById('cien1').value,
+			"cieb1n2": document.getElementById('cien2').value,
 			"edfb1n1": document.getElementById('edfn1').value,
 			"edfb1n2": document.getElementById('edfn2').value,
 			"filb1n1": document.getElementById('filn1').value,
@@ -98,6 +142,7 @@ function salvar() {
         collection.doc(user.uid).set(data, {merge: true}).then(() => {
             calcularMediaIndividual('artn1', 'artn2', 'artmb');
             calcularMediaIndividual('bion1', 'bion2', 'biomb');
+            calcularMediaIndividual('cien1', 'cien2', 'ciemb');
             calcularMediaIndividual('edfn1', 'edfn2', 'edfmb');
             calcularMediaIndividual('filn1', 'filn2', 'filmb');
             calcularMediaIndividual('fisn1', 'fisn2', 'fismb');
@@ -141,4 +186,32 @@ function calcularMediaIndividual(id1, id2, idResultado) {
     } else {
         console.error(`Elemento com ID ${idResultado} não encontrado`);
     }
+}
+
+function button1() {
+    document.getElementById("bt1").disabled = true;
+    document.getElementById("bt1").style.backgroundColor = "rgb(0, 225, 0)";
+    document.getElementById("bt2").disabled = false;
+    document.getElementById("bt2").style.backgroundColor = "rgb(225, 0, 0)";
+
+    document.getElementById("Lcie").style.display = "";
+    document.getElementById("Lbio").style.display = "none";
+    document.getElementById("Lfis").style.display = "none";
+    document.getElementById("Lqui").style.display = "none";
+    document.getElementById("Lfil").style.display = "none";
+    document.getElementById("Lsoc").style.display = "none";
+}
+
+function button2() {
+    document.getElementById("bt2").disabled = true;
+    document.getElementById("bt2").style.backgroundColor = "rgb(0, 225, 0)";
+    document.getElementById("bt1").disabled = false;
+    document.getElementById("bt1").style.backgroundColor = "rgb(225, 0, 0)";
+
+    document.getElementById("Lcie").style.display = "none";
+    document.getElementById("Lbio").style.display = "";
+    document.getElementById("Lfis").style.display = "";
+    document.getElementById("Lqui").style.display = "";
+    document.getElementById("Lfil").style.display = "";
+    document.getElementById("Lsoc").style.display = "";
 }
